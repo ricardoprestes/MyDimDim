@@ -1,31 +1,27 @@
-﻿using System;
+﻿using Prism;
+using Prism.DryIoc;
+using Prism.Ioc;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MyDimDim
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
-        public App()
-        {
-            InitializeComponent();
+        public App() : this(null) { }
 
-            MainPage = new MainPage();
+        public App(IPlatformInitializer initializer) : base(initializer)
+        { }
+
+        protected override async void OnInitialized()
+        {
+            var startPage = nameof(NavigationPage) + "/" + nameof(MainPage);
+            await NavigationService.NavigateAsync(startPage);
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
         }
     }
 }
