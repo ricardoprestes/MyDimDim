@@ -1,5 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyDimDim.Views.DashboardPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    x:Class="MyDimDim.Views.DashboardPage">
     <ContentPage.Content>
+        <ScrollView
+            Padding="10">
+
+            <StackLayout>
+                <material:MaterialCard
+                    CornerRadius="20"
+                    Elevation="2"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        
+
+                        <Label
+                            Grid.Row="0"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                            Text="Saldo" />
+
+                        <Label
+                            Grid.Row="1"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            Text="R$ 5.000,00" />
+
+                        <Grid
+                            Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout
+                                Grid.Column="0"
+                                BackgroundColor="Red">
+
+
+
+                            </StackLayout>
+
+                            <StackLayout
+                                Grid.Column="1"
+                                BackgroundColor="Blue">
+
+                             </StackLayout>
+
+                        </Grid>
+
+                    </Grid>
+
+                </material:MaterialCard>
+            </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

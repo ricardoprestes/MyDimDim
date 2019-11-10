@@ -11,7 +11,9 @@ namespace MyDimDim
         public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer)
-        { }
+        {
+            XF.Material.Forms.Material.Init(this);
+        }
 
         protected override async void OnInitialized()
         {
