@@ -4,8 +4,6 @@ using Xamarin.Forms;
 
 namespace MyDimDim
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : TabbedPage
     {
@@ -13,9 +11,9 @@ namespace MyDimDim
         {
             InitializeComponent();
 
-            Children.Add(new DashboardPage { Title = "Dashboard" });
-            Children.Add(new TransactionsPage { Title = "Transações" });
-            Children.Add(new ProfilePage { Title = "Perfil" });
+            Children.Add(new DashboardPage { Title = "Dashboard", IconImageSource = "chart_arc" });
+            Children.Add(new TransactionsPage { Title = "Movimentações", IconImageSource = "finance" });
+            Children.Add(new ProfilePage { Title = "Perfil", IconImageSource = "account_circle" });
         }
     }
 }

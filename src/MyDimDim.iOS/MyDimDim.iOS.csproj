@@ -110,6 +110,18 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_30.png" />
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_60.png" />
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_90.png" />
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_30.png" />
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_60.png" />
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_90.png" />
+    <ImageAsset Include="Assets.xcassets\finance.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_30.png" />
+    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_60.png" />
+    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_90.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -132,5 +144,10 @@
       <Project>{688321C7-61A5-493F-9A5B-6DB28E4C3955}</Project>
       <Name>MyDimDim</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\account_circle.imageset\" />
+    <Folder Include="Assets.xcassets\chart_arc.imageset\" />
+    <Folder Include="Assets.xcassets\finance.imageset\" />
   </ItemGroup>
 </Project>
