@@ -1,4 +1,9 @@
-﻿namespace MyDimDim.ViewModels
+﻿using System;
+using System.Collections.ObjectModel;
+using MyDimDim.Enums;
+using MyDimDim.Models;
+
+namespace MyDimDim.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
@@ -10,24 +15,34 @@
             set => SetProperty(ref _balance, value);
         }
 
-        decimal _revenue;
-        public decimal Revenue
+        decimal _revenues;
+        public decimal Revenues
         {
-            get => _revenue;
-            set => SetProperty(ref _revenue, value);
+            get => _revenues;
+            set => SetProperty(ref _revenues, value);
         }
 
         decimal _expenses;
-        public decimal Expenses {
+        public decimal Expenses
+        {
             get => _expenses;
             set => SetProperty(ref _expenses, value);
         }
 
+        public ObservableCollection<Movimentation> Movimentations { get; set; }
+
         public DashboardViewModel()
         {
             Balance = 5530;
-            Revenue = 2500;
+            Revenues = 2500;
             Expenses = 2335;
+
+            Movimentations = new ObservableCollection<Movimentation>
+            {
+                new Movimentation{Type= EMovimentationType.Revenue, Date = DateTime.Today, Value=3000, Name="Pagamento" },
+                new Movimentation{Type= EMovimentationType.Expense, Date = DateTime.Today.AddDays(2), Value=1000, Name="Aluguel" },
+                new Movimentation{Type= EMovimentationType.Expense, Date = DateTime.Today.AddDays(3), Value=120, Name="Conta de Água" }
+            };
         }
     }
 }

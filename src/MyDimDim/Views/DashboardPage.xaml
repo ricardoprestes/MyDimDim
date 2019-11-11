@@ -9,8 +9,7 @@
         <ScrollView>
 
             <StackLayout
-                Padding="10"
-                Spacing="20">
+                Padding="10">
                 <material:MaterialCard
                     CornerRadius="20"
                     Elevation="2"
@@ -65,7 +64,7 @@
                                     <Label
                                         FontSize="Large"
                                         TextColor="#18780a"
-                                        Text="{Binding Revenue, StringFormat='{0:R$ ###,###,##0.00}'}" />
+                                        Text="{Binding Revenues, StringFormat='{0:R$ ###,###,##0.00}'}" />
                                 </StackLayout>
 
                             </StackLayout>
@@ -108,10 +107,110 @@
                     TextColor="Gray"
                     />
 
+                <CollectionView
+                    ItemsSource="{Binding Movimentations}"
+                    ItemsLayout="HorizontalList"
+                    HeightRequest="100">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout
+                                Padding="10">
+                                <material:MaterialCard
+                                    CornerRadius="10"
+                                    WidthRequest="130"
+                                    Elevation="2"
+                                    Padding="5">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Source="arrow_up"/>
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            FontSize="Medium"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding Value, StringFormat='{0:R$ ###,###,##0.00}'}"/>
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            Text="{Binding Name}"
+                                            FontSize="Small"/>
+                                    </Grid>
+                                </material:MaterialCard>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
                 <Label
                     Text="Cartões de Crédito"
                     TextColor="Gray"
                     />
+
+                <CollectionView
+                    ItemsSource="{Binding Movimentations}"
+                    ItemsLayout="HorizontalList"
+                    HeightRequest="180">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout
+                                Padding="10">
+                                <material:MaterialCard
+                                    CornerRadius="10"
+                                    WidthRequest="240"
+                                    Elevation="2"
+                                    Padding="5">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="70"/>
+                                            <RowDefinition Height="70"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Source="arrow_up"/>
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            FontSize="Medium"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding Value, StringFormat='{0:R$ ###,###,##0.00}'}"/>
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            Text="{Binding Name}"
+                                            FontSize="Small"/>
+                                    </Grid>
+                                </material:MaterialCard>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
             </StackLayout>
 
