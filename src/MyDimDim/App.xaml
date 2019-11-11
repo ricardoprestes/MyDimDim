@@ -8,5 +8,14 @@
     mc:Ignorable="d"
     x:Class="MyDimDim.App">
     <Application.Resources>
+        <Color x:Key="ColorPrimary">#5a5c60</Color>
+        <Color x:Key="ColorPrimaryDark">#3f4247</Color>
+        <Color x:Key="ColorAccent">#5a5c60</Color>
+
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource ColorPrimary}" />
+            <Setter Property="BarTextColor" Value="White" />
+        </Style>
+
     </Application.Resources>
 </prism:PrismApplication>

@@ -12,11 +12,14 @@ namespace MyDimDim
 
         public App(IPlatformInitializer initializer) : base(initializer)
         {
-            XF.Material.Forms.Material.Init(this);
+            
         }
 
         protected override async void OnInitialized()
         {
+            InitializeComponent();
+            XF.Material.Forms.Material.Init(this);
+
             var startPage = nameof(NavigationPage) + "/" + nameof(MainPage);
             await NavigationService.NavigateAsync(startPage);
         }

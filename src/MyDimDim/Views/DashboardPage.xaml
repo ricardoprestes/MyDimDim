@@ -3,16 +3,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
-    x:Class="MyDimDim.Views.DashboardPage">
+    x:Class="MyDimDim.Views.DashboardPage"
+    BackgroundColor="#f7f8fa">
     <ContentPage.Content>
-        <ScrollView
-            Padding="10">
+        <ScrollView>
 
-            <StackLayout>
+            <StackLayout
+                Padding="10"
+                Spacing="20">
                 <material:MaterialCard
                     CornerRadius="20"
                     Elevation="2"
-                    HeightRequest="80"
                     HorizontalOptions="FillAndExpand">
 
                     <Grid>
@@ -22,8 +23,6 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        
-
                         <Label
                             Grid.Row="0"
                             FontSize="Small"
@@ -32,8 +31,9 @@
 
                         <Label
                             Grid.Row="1"
-                            FontSize="Large"
+                            FontSize="Title"
                             FontAttributes="Bold"
+                            TextColor="#18780a"
                             HorizontalTextAlignment="Center"
                             Text="R$ 5.000,00" />
 
@@ -44,25 +44,75 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+
                             <StackLayout
                                 Grid.Column="0"
-                                BackgroundColor="Red">
+                                Grid.Row="0"
+                                Orientation="Horizontal">
 
+                                <Image
+                                    Source="finance"/>
 
+                                <StackLayout>
+                                    <Label
+                                        FontSize="Micro"
+                                        TextColor="Gray"
+                                        Text="Receitas"/>
+
+                                    <Label
+                                        FontSize="Large"
+                                        TextColor="#18780a"
+                                        Text="R$ 2.500,00"/>
+                                </StackLayout>
 
                             </StackLayout>
 
                             <StackLayout
                                 Grid.Column="1"
-                                BackgroundColor="Blue">
+                                Grid.Row="0"
+                                Orientation="Horizontal">
 
-                             </StackLayout>
+                                <Image
+                                    Source="finance"/>
+
+                                <StackLayout>
+                                    <Label
+                                        FontSize="Micro"
+                                        TextColor="Gray"
+                                        Text="Despesas"/>
+
+                                    <Label
+                                        FontSize="Large"
+                                        TextColor="#c41212"
+                                        Text="R$ 500,00"/>
+                                </StackLayout>
+
+                            </StackLayout>
 
                         </Grid>
 
                     </Grid>
 
                 </material:MaterialCard>
+
+                <Label
+                    Text="Despesas por Categoria"
+                    TextColor="Gray"
+                    />
+
+                <Label
+                    Text="Próxmimas Movimentações"
+                    TextColor="Gray"
+                    />
+
+                <Label
+                    Text="Cartões de Crédito"
+                    TextColor="Gray"
+                    />
+
             </StackLayout>
 
         </ScrollView>
