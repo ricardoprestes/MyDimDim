@@ -3,6 +3,7 @@ using Prism.DryIoc;
 using Prism.Ioc;
 using Xamarin.Forms;
 using MyDimDim.Views;
+using MyDimDim.ViewModels;
 
 namespace MyDimDim
 {
@@ -28,6 +29,7 @@ namespace MyDimDim
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<DashboardPage, DashboardViewModel>();
             containerRegistry.RegisterForNavigation<TransactionsPage>();
             containerRegistry.RegisterForNavigation<ProfilePage>();
         }

@@ -122,6 +122,14 @@
     <ImageAsset Include="Assets.xcassets\finance.imageset\finance_30.png" />
     <ImageAsset Include="Assets.xcassets\finance.imageset\finance_60.png" />
     <ImageAsset Include="Assets.xcassets\finance.imageset\finance_90.png" />
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_30.png" />
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_60.png" />
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_90.png" />
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_30.png" />
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_60.png" />
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_90.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -152,5 +160,7 @@
     <Folder Include="Assets.xcassets\account_circle.imageset\" />
     <Folder Include="Assets.xcassets\chart_arc.imageset\" />
     <Folder Include="Assets.xcassets\finance.imageset\" />
+    <Folder Include="Assets.xcassets\arrow_up.imageset\" />
+    <Folder Include="Assets.xcassets\arrow_down.imageset\" />
   </ItemGroup>
 </Project>

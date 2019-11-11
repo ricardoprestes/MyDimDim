@@ -35,7 +35,7 @@
                             FontAttributes="Bold"
                             TextColor="#18780a"
                             HorizontalTextAlignment="Center"
-                            Text="R$ 5.000,00" />
+                            Text="{Binding Balance, StringFormat='{0:R$ ###,###,##0.00}'}" />
 
                         <Grid
                             Grid.Row="2">
@@ -54,7 +54,7 @@
                                 Orientation="Horizontal">
 
                                 <Image
-                                    Source="finance"/>
+                                    Source="arrow_down"/>
 
                                 <StackLayout>
                                     <Label
@@ -65,7 +65,7 @@
                                     <Label
                                         FontSize="Large"
                                         TextColor="#18780a"
-                                        Text="R$ 2.500,00"/>
+                                        Text="{Binding Revenue, StringFormat='{0:R$ ###,###,##0.00}'}" />
                                 </StackLayout>
 
                             </StackLayout>
@@ -76,7 +76,7 @@
                                 Orientation="Horizontal">
 
                                 <Image
-                                    Source="finance"/>
+                                    Source="arrow_up"/>
 
                                 <StackLayout>
                                     <Label
@@ -87,7 +87,7 @@
                                     <Label
                                         FontSize="Large"
                                         TextColor="#c41212"
-                                        Text="R$ 500,00"/>
+                                        Text="{Binding Expenses, StringFormat='{0:R$ ###,###,##0.00}'}" />
                                 </StackLayout>
 
                             </StackLayout>
