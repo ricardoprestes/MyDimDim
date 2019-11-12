@@ -33,7 +33,8 @@ namespace MyDimDim.ViewModels
         }
 
         Chart _chart;
-        public Chart Chart {
+        public Chart Chart
+        {
             get => _chart;
             private set => SetProperty(ref _chart, value);
         }
@@ -111,7 +112,7 @@ namespace MyDimDim.ViewModels
                     Color = SKColor.Parse("#17736e")
                 }
             };
-            return new DonutChart { Entries = entries };
+            return new DonutChart { Entries = entries, LabelTextSize = 24 };
         }
     }
 }
