@@ -16,5 +16,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Models\" />
     <Folder Include="Enums\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

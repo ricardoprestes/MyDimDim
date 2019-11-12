@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:MyDimDim.Converters"
     xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     x:Class="MyDimDim.Views.DashboardPage"
     BackgroundColor="#f7f8fa">
@@ -32,7 +33,7 @@
                             Grid.Row="1"
                             FontSize="Title"
                             FontAttributes="Bold"
-                            TextColor="#18780a"
+                            TextColor="{StaticResource ColorRevenue}"
                             HorizontalTextAlignment="Center"
                             Text="{Binding Balance, StringFormat='{0:R$ ###,###,##0.00}'}" />
 
@@ -63,7 +64,7 @@
 
                                     <Label
                                         FontSize="Large"
-                                        TextColor="#18780a"
+                                        TextColor="{StaticResource ColorRevenue}"
                                         Text="{Binding Revenues, StringFormat='{0:R$ ###,###,##0.00}'}" />
                                 </StackLayout>
 
@@ -85,7 +86,7 @@
 
                                     <Label
                                         FontSize="Large"
-                                        TextColor="#c41212"
+                                        TextColor="{StaticResource ColorExpense}"
                                         Text="{Binding Expenses, StringFormat='{0:R$ ###,###,##0.00}'}" />
                                 </StackLayout>
 
@@ -103,7 +104,7 @@
                     />
 
                 <Label
-                    Text="Próxmimas Movimentações"
+                    Text="Movimentações dos Próximos 7 Dias"
                     TextColor="Gray"
                     />
 
@@ -135,13 +136,14 @@
                                         <Image
                                             Grid.Row="0"
                                             Grid.Column="0"
-                                            Source="arrow_up"/>
+                                            Source="{Binding Type, Converter={converters:IconMovimentationTypeConverter}}"/>
 
                                         <Label
                                             Grid.Row="0"
                                             Grid.Column="1"
                                             FontSize="Medium"
                                             VerticalTextAlignment="Center"
+                                            TextColor="{Binding Type, Converter={converters:ColorMovimentationTypeConverter}}"
                                             Text="{Binding Value, StringFormat='{0:R$ ###,###,##0.00}'}"/>
 
                                         <Label
