@@ -8,9 +8,9 @@
     mc:Ignorable="d"
     x:Class="MyDimDim.App">
     <Application.Resources>
-        <Color x:Key="ColorPrimary">#5a5c60</Color>
-        <Color x:Key="ColorPrimaryDark">#3f4247</Color>
-        <Color x:Key="ColorAccent">#5a5c60</Color>
+        <Color x:Key="ColorPrimary">#214f22</Color>
+        <Color x:Key="ColorPrimaryDark">#163617</Color>
+        <Color x:Key="ColorAccent">#214f22</Color>
         <Color x:Key="ColorRevenue">#18780a</Color>
         <Color x:Key="ColorExpense">#c41212</Color>
         <Color x:Key="ColorTransfer">#146ae3</Color>

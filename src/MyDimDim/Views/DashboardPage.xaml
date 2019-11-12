@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:converters="clr-namespace:MyDimDim.Converters"
     xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
     x:Class="MyDimDim.Views.DashboardPage"
     BackgroundColor="#f7f8fa">
     <ContentPage.Content>
@@ -103,6 +104,12 @@
                     TextColor="Gray"
                     />
 
+                <microcharts:ChartView
+                    x:Name="chartView"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="160"
+                    Chart="{Binding Chart}"/>
+
                 <Label
                     Text="Movimentações dos Próximos 7 Dias"
                     TextColor="Gray"
@@ -167,71 +174,61 @@
                 <CollectionView
                     ItemsSource="{Binding CreditCards}"
                     ItemsLayout="HorizontalList"
-                    HeightRequest="180">
+                    HeightRequest="190">
 
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout
-                                Padding="10">
+                                Padding="5">
                                 <material:MaterialCard
                                     CornerRadius="10"
                                     WidthRequest="240"
                                     Elevation="2"
-                                    Padding="5">
+                                    Padding="10"
+                                    BackgroundColor="{Binding CardColor}">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="20"/>
-                                            <RowDefinition Height="30"/>
-                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="25"/>
+                                            <RowDefinition Height="20"/>
                                             <RowDefinition Height="20"/>
                                             <RowDefinition Height="30"/>
                                             <RowDefinition Height="10"/>
                                         </Grid.RowDefinitions>
 
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-
-                                        <Image
-                                            Grid.Row="0"
-                                            Grid.Column="0"
-                                            Source="arrow_up"/>
-
                                         <Label
                                             Grid.Row="0"
-                                            Grid.Column="1"
+                                            FontAttributes="Bold"
+                                            TextColor="{Binding TextColor}"
                                             Text="{Binding Name}"
                                             FontSize="Small"/>
 
                                         <Label
                                             Grid.Row="1"
-                                            Grid.Column="1"
                                             FontSize="Large"
                                             HorizontalTextAlignment="End"
                                             VerticalTextAlignment="Center"
+                                            FontAttributes="Bold"
+                                            TextColor="{Binding TextColor}"
                                             Text="{Binding BillValue, StringFormat='{0:R$ ###,###,##0.00}'}"/>
 
                                         <Label
                                             Grid.Row="2"
-                                            Grid.Column="1"
                                             HorizontalTextAlignment="End"
                                             VerticalTextAlignment="Center"
                                             FontSize="Small"
+                                            TextColor="{Binding TextColor}"
                                             Text="{Binding Expiration, StringFormat='Vence em: {0:dd/MMM}'}"/>
 
                                         <Label
                                             Grid.Row="3"
-                                            Grid.Column="0"
-                                            Grid.ColumnSpan="2"
                                             HorizontalTextAlignment="Center"
+                                            TextColor="{Binding TextColor}"
                                             Text="{Binding Number}"/>
 
                                         <BoxView
                                             Grid.Row="4"
-                                            Grid.Column="0"
-                                            Grid.ColumnSpan="2"
-                                            Margin="-5,0"
+                                            Margin="-10,0"
                                             BackgroundColor="Black"/>
                                         
                                     </Grid>
