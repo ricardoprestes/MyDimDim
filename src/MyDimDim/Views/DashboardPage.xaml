@@ -165,7 +165,7 @@
                     />
 
                 <CollectionView
-                    ItemsSource="{Binding Movimentations}"
+                    ItemsSource="{Binding CreditCards}"
                     ItemsLayout="HorizontalList"
                     HeightRequest="180">
 
@@ -180,8 +180,12 @@
                                     Padding="5">
                                     <Grid>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="70"/>
-                                            <RowDefinition Height="70"/>
+                                            <RowDefinition Height="20"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="20"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="10"/>
                                         </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
@@ -197,16 +201,39 @@
                                         <Label
                                             Grid.Row="0"
                                             Grid.Column="1"
-                                            FontSize="Medium"
-                                            VerticalTextAlignment="Center"
-                                            Text="{Binding Value, StringFormat='{0:R$ ###,###,##0.00}'}"/>
+                                            Text="{Binding Name}"
+                                            FontSize="Small"/>
 
                                         <Label
                                             Grid.Row="1"
+                                            Grid.Column="1"
+                                            FontSize="Large"
+                                            HorizontalTextAlignment="End"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding BillValue, StringFormat='{0:R$ ###,###,##0.00}'}"/>
+
+                                        <Label
+                                            Grid.Row="2"
+                                            Grid.Column="1"
+                                            HorizontalTextAlignment="End"
+                                            VerticalTextAlignment="Center"
+                                            FontSize="Small"
+                                            Text="{Binding Expiration, StringFormat='Vence em: {0:dd/MMM}'}"/>
+
+                                        <Label
+                                            Grid.Row="3"
                                             Grid.Column="0"
                                             Grid.ColumnSpan="2"
-                                            Text="{Binding Name}"
-                                            FontSize="Small"/>
+                                            HorizontalTextAlignment="Center"
+                                            Text="{Binding Number}"/>
+
+                                        <BoxView
+                                            Grid.Row="4"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            Margin="-5,0"
+                                            BackgroundColor="Black"/>
+                                        
                                     </Grid>
                                 </material:MaterialCard>
                             </StackLayout>

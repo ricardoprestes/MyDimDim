@@ -30,6 +30,7 @@ namespace MyDimDim.ViewModels
         }
 
         public ObservableCollection<Movimentation> Movimentations { get; set; }
+        public ObservableCollection<CreditCard> CreditCards { get; set; }
 
         public DashboardViewModel()
         {
@@ -42,6 +43,22 @@ namespace MyDimDim.ViewModels
                 new Movimentation{Type= EMovimentationType.Revenue, Date = DateTime.Today, Value=3000, Name="Pagamento" },
                 new Movimentation{Type= EMovimentationType.Expense, Date = DateTime.Today.AddDays(2), Value=1000, Name="Aluguel" },
                 new Movimentation{Type= EMovimentationType.Expense, Date = DateTime.Today.AddDays(3), Value=120, Name="Conta de Água" }
+            };
+
+            CreditCards = new ObservableCollection<CreditCard>
+            {
+                new CreditCard{
+                    Name = "NuBank",
+                    Number = "**** **** *** 0000",
+                    BillValue = 325.67m,
+                    Expiration=DateTime.Today.AddDays(5)
+                },
+                new CreditCard{
+                    Name = "Bando do Brasil",
+                    Number = "**** **** *** 1111",
+                    BillValue = 123,
+                    Expiration=DateTime.Today.AddDays(7)
+                }
             };
         }
     }
