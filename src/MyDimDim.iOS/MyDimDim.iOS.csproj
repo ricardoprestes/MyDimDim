@@ -110,26 +110,66 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\account_circle.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_30.png" />
-    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_60.png" />
-    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_90.png" />
-    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_30.png" />
-    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_60.png" />
-    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_90.png" />
-    <ImageAsset Include="Assets.xcassets\finance.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_30.png" />
-    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_60.png" />
-    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_90.png" />
-    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_30.png" />
-    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_60.png" />
-    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_90.png" />
-    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_30.png" />
-    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_60.png" />
-    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_90.png" />
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_30.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\account_circle.imageset\account-circle_90.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_30.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\chart_arc.imageset\chart-arc_90.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\finance.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_30.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\finance.imageset\finance_90.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_30.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_up.imageset\arrow-up_90.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_30.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\arrow_down.imageset\arrow-down_90.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
